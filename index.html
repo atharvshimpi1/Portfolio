@@ -14,7 +14,7 @@
 <body>
 	<!------Header Section------>
 	<header>
-		<a href="#" class="logo">Devlo<span>pe</span>r..</a>
+		<a href="#" class="logo">Port<span>fo</span>lio</a>
 		<ul class="navlist">
 			<li><a href="#home" class="active">Home</a></li>
 			<li><a href="#about">About Me</a></li>
@@ -67,7 +67,7 @@
 	<!-----------Services Section-------------->
 	<section class="skills" id="skills">
 	<div class="main-text">
-		<h2><span>My</span>Skills</h2>
+		<h2><span>My </span>Skills</h2>
 	</div>
 	<div class="services-content">
 		<div class="box">
@@ -103,7 +103,7 @@
 <!-----------Portfolio Section--------------->
 <section class="portfolio" id="portfolio">
 	<div class="main-text">
-		<h2><span>latest</span>Project</h2>
+		<h2><span>latest </span>Project</h2>
 	</div>
 	<div class="portfolio-content">
 		<div class="row">
@@ -204,6 +204,23 @@
 		<a href="#home"><i class='bx bx-up-arrow-alt' ></i></a>
 	</div>
 </section>
+<script>
+	let menuIcon = document.querySelector('#menu-icon');
+	let navlist = document.querySelector('.navlist');
+
+	menuIcon.onclick = () => {
+		menuIcon.classList.toggle('bx-x');
+		navlist.classList.toggle('open');
+	};
+
+	// Close menu when clicking a link (optional but recommended)
+	document.querySelectorAll('.navlist a').forEach(link => {
+		link.onclick = () => {
+			menuIcon.classList.remove('bx-x');
+			navlist.classList.remove('open');
+		};
+	});
+</script>
 
 </body>
 
